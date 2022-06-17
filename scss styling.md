@@ -66,3 +66,32 @@ The important thing here was that I calculated the height of my container to mat
 Next was just fiddling around with positioning in the `img`
 
 Fun trick I used was `transform scaleX(-1)` in order to mirror the image since I was a bit leaned over in one direction in my original pic.
+
+## Using animations
+
+I started implementing animations for certain images on my page to give it a more alive feel to my page such as animating this small arrow bouncing.
+
+``` scss 
+
+            img {
+                width: 80px;
+                animation: arrowBounce 2s infinite;
+            }
+
+            @keyframes arrowBounce {
+                0%, 20%, 50%, 80%, 100% {
+                  transform: translateY(0);
+                }
+                40% {
+                  transform: translateY(-30px);
+                }
+                60% {
+                  transform: translateY(-15px);
+                }
+              }
+
+```
+
+the percentage values are used to separate the frames of the arrow and how it's going to be animated.
+
+This allows us to specifically time movements to get the smoothest outcome.
