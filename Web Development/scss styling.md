@@ -95,3 +95,26 @@ I started implementing animations for certain images on my page to give it a mor
 the percentage values are used to separate the frames of the arrow and how it's going to be animated.
 
 This allows us to specifically time movements to get the smoothest outcome.
+
+## React components
+
+I am implementing some packages that I have found on the web to add some more flare to my website and make it look more crisp.
+
+Ran across some issues with react hooks, and found out that all react components **MUST** start with capital letters. Good to know.
+
+```jsx
+
+export default function Intro() {
+
+  const textRef = useRef();
+
+  useEffect(() => {
+    init(textRef.current, { 
+      showCursor: false, 
+      strings: ['Developer','Designer','Creator' ] 
+    });
+  }, []); 
+
+  ```
+
+  A silly mistake I made making my intro function lowercase, changing it made the package work.  Learning the hard way today.
