@@ -67,6 +67,8 @@ Next was just fiddling around with positioning in the `img`
 
 Fun trick I used was `transform scaleX(-1)` in order to mirror the image since I was a bit leaned over in one direction in my original pic.
 
+----
+
 ## Using animations
 
 I started implementing animations for certain images on my page to give it a more alive feel to my page such as animating this small arrow bouncing.
@@ -96,6 +98,8 @@ the percentage values are used to separate the frames of the arrow and how it's 
 
 This allows us to specifically time movements to get the smoothest outcome.
 
+----
+
 ## React components
 
 I am implementing some packages that I have found on the web to add some more flare to my website and make it look more crisp.
@@ -118,3 +122,19 @@ export default function Intro() {
   ```
 
   A silly mistake I made making my intro function lowercase, changing it made the package work.  Learning the hard way today.
+
+----
+
+## Quality of life choices
+
+A lot of the time when I am using anchors `<a>` I don't want them to open on the same page that I am using especially if it is my portfolio
+
+I want to keep the user's eyes on my page as much as possible so a cool trick I found was to use 
+
+`target="_blank"`
+
+But quickly found out that there are many security risks when just using this line.
+
+we have to also include the `rel` attribute and use the keywords `"noopener noreferrer"` resulting in `rel="noopener noreferrer"`
+
+`noopener` instructs our browser to navigate to the target resource without granting the new browsing any context access to the document that opened it.
