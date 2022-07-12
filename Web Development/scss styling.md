@@ -67,6 +67,20 @@ Next was just fiddling around with positioning in the `img`
 
 Fun trick I used was `transform scaleX(-1)` in order to mirror the image since I was a bit leaned over in one direction in my original pic.
 
+## Overflow
+
+the `overflow` property is really nice to use in a lot of ways ebcause it allows us to format things so that they fit in nice little neat spots that we create.
+
+So I created a white container to house some items I was using on a scroll page, and turns out my rounded borders were being over-written due to the background color
+
+![](./images/without%20overflow.jpg)
+
+I was noticing a problem with my colors overflowing in different div's and my `border-radius` property was getting overwritten.
+
+Turns out it was a simple fix using `overflow: hidden`
+
+![](./Images/with%20overflow.jpg)
+
 ----
 
 ## Using animations
