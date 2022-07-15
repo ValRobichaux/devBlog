@@ -152,3 +152,29 @@ But quickly found out that there are many security risks when just using this li
 we have to also include the `rel` attribute and use the keywords `"noopener noreferrer"` resulting in `rel="noopener noreferrer"`
 
 `noopener` instructs our browser to navigate to the target resource without granting the new browsing any context access to the document that opened it.
+
+
+----
+
+## SCSS debugging tips
+
+Something I have noticed a lot of while making my scss was that I would often get unresponsive results when styling my components.
+
+Issues have ranged from not putting `div` tags in the correct spots to simple typos.
+
+Something that has really helped me was inspect tool and also a tool in VScode that really lays things out for you in a hierarchal layout.  Let me show you.
+
+![](./Images/scss1.jpg)
+
+Now look at the tob bar where my tabs would be 
+
+![](./Images/scss2.jpg)
+
+You'll notice how all of them are lined up corresponding to how they are layered in my styling sheet, making it very easy for me to see if things are being added correctly and in the correct spots.
+
+extra tid-bit
+
+![](./Images/scss3.jpg)
+
+If you look in the browser inspect tool you can also see if the stylesheet is being inherited by the component to check if you mispelled it or if you have misplaced a component.
+
