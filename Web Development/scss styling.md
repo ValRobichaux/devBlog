@@ -67,6 +67,26 @@ Next was just fiddling around with positioning in the `img`
 
 Fun trick I used was `transform scaleX(-1)` in order to mirror the image since I was a bit leaned over in one direction in my original pic.
 
+----
+
+Ok so I just found out something super cool and it helped me fix a ton of formatting issues that I was having.
+
+I was having trouble getting the height of a header and a `<p>` tag matching up so that the tag's contents were right under the header.
+
+![](./Images/header1.png)
+
+here we can see the size of the div we have to work with and I solved this by putting the `<p>` tag inside of the header tag and viola!
+
+![](./Images/header2.png)
+
+``` jsx
+<h2>{d.title}
+                <p>{d.description}</p>
+                </h2>
+```
+It's honestly a pretty dumb and minor thing but hey maybe it helps someone out with a formatting issue!
+
+----
 ## Overflow
 
 the `overflow` property is really nice to use in a lot of ways ebcause it allows us to format things so that they fit in nice little neat spots that we create.
