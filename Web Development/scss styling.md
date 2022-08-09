@@ -132,6 +132,51 @@ the percentage values are used to separate the frames of the arrow and how it's 
 
 This allows us to specifically time movements to get the smoothest outcome.
 
+## Animations, animations, animations...
+
+Wow did these give me a hard time.
+
+![](/Web%20Development/Images/arrows.png)
+
+I was trying to figure out how to make these arrows bounce when they were hovered on my interests page.
+
+I was having trouble because they kept resetting their rotation everytime I had to implement the bounce animation.
+
+```scss
+    .arrow{
+        height: 75px;
+        position: absolute;
+
+        &.left{
+            left: 250px;
+            transform: rotateY(180deg);
+            transform: rotate(90deg);
+
+            &:hover {
+                animation: bounceLeft 2s infinite;
+            }
+        }
+```
+
+It was driving me mad because it would immediately reset the rotation upon animation start
+
+I soon realized that the animation overrides transformations and sets anything that is rotated back to a degree of 0.
+
+So what I had to do is just implement the rotations **WITHIN** the animation so that the rotation stayed consistent with the direction of the arrow
+
+```scss
+ @keyframes bounceLeft {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateX(0) rotate(90deg) rotateY(180deg);
+        }
+        40% {
+          transform: translateX(30px) rotate(90deg) rotateY(180deg);
+        }
+        60% {
+          transform: translateX(15px) rotate(90deg) rotateY(180deg);
+        }
+      }
+```
 ----
 
 ## React components
