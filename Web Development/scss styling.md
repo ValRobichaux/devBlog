@@ -93,7 +93,7 @@ the `overflow` property is really nice to use in a lot of ways ebcause it allows
 
 So I created a white container to house some items I was using on a scroll page, and turns out my rounded borders were being over-written due to the background color
 
-![](./images/without%20overflow.jpg)
+![](./Images/without%20overflow.jpg)
 
 I was noticing a problem with my colors overflowing in different div's and my `border-radius` property was getting overwritten.
 
